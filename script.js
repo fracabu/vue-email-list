@@ -25,6 +25,7 @@ const appVue = new Vue({
             axios
             .get("https://flynn.boolean.careers/exercises/api/random/mail")
             .then(function(response){
+                // stampo solo la mail contenuta nei data ricevuti dal server
                 console.log(response.data.response);
 
             });
