@@ -14,6 +14,8 @@ const appVue = new Vue({
 
 
     data: {
+        // array che dovrà contenere le dieci mail stampate nel DOM
+        listaMail : []
 
     },
 
@@ -24,10 +26,11 @@ const appVue = new Vue({
         stampaMail(){
             axios
             .get("https://flynn.boolean.careers/exercises/api/random/mail")
-            .then(function(response){
+            // funzione arrow altrimenti non posso stampare in html
+            .then((response) => {
                 // stampo solo la mail contenuta nei data ricevuti dal server
                 console.log(response.data.response);
-
+             this.listaMail = response.data.response;
             });
 
         },
