@@ -32,6 +32,9 @@ const appVue = new Vue({
                 console.log(response.data.response);
                 this.listaMail.push(response.data.response);
                 
+                
+
+                
             });
 
         },
