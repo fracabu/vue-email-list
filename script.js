@@ -7,7 +7,7 @@
 
 
 
-
+/*
 const appVue = new Vue({
     // 
     el: "#app",
@@ -22,3 +22,22 @@ const appVue = new Vue({
 
     }
 });
+*/
+//                      URI                     HTTP BODY
+axios
+    .get("https://flynn.boolean.careers/exercises/api/random/int")
+    .then(function (response) {
+        console.log(response);
+    });
+
+/* 
+RISULTATO DEL CONSOLE LOG DI RESPONSE
+Object
+config: {url: 'https://flynn.boolean.careers/exercises/api/random/int', method: 'get', headers: {…}, transformRequest: Array(1), transformResponse: Array(1), …}
+data: {success: true, response: 9}
+headers: {cache-control: 'no-cache, private', content-length: '29', content-type: 'application/json'}
+request: XMLHttpRequest {readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, onreadystatechange: ƒ, …}
+status: 200
+statusText: "OK"
+[[Prototype]]: Object
+*/
