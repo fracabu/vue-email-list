@@ -19,22 +19,33 @@ const appVue = new Vue({
 
 
     methods: {
-        // funzione per stampare le email recuperate tramite chiamata al server
+
+        // funzione per attivare il click sul pulsante stampa mail che chiederà le email al server
         stampaMail(){
+            axios
+            .get("https://flynn.boolean.careers/exercises/api/random/mail")
+            .then(function(response){
+                console.log(response.data.response);
+
+            });
 
         },
 
-    }
+    },
 });
 
-//                      URI                     HTTP BODY
+
+//                          APPUNTI LEZIONE 17/06/2022
+
+
+/*                     URI                     HTTP BODY
 axios
     .get("https://flynn.boolean.careers/exercises/api/random/mail")
     .then(function (response) {
         console.log(response.data.response);
     
     });
-
+*/
 /* 
 RISULTATO DEL CONSOLE.LOG di response.data.response sarà il valore che abbiamo richiesto*/
 
