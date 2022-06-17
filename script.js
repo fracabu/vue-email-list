@@ -30,7 +30,7 @@ const appVue = new Vue({
             .then((response) => {
                 // stampo solo la mail contenuta nei data ricevuti dal server
                 console.log(response.data.response);
-                this.listaMail.push(response.data.response) = response.data.response;
+                this.listaMail.push(response.data.response);
                 
             });
 
