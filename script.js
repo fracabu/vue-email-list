@@ -23,7 +23,10 @@ const appVue = new Vue({
     methods: {
 
         // funzione per attivare il click sul pulsante stampa mail che chiederà le email al server
+        
+        
         stampaMail(){
+            for ( let i = 0 ; i <= 10; i++){
             axios
             .get("https://flynn.boolean.careers/exercises/api/random/mail")
             // funzione arrow altrimenti il this non funziona e non stamperà le mail nel dom
@@ -31,14 +34,10 @@ const appVue = new Vue({
                 // stampo solo la mail contenuta nei data ricevuti dal server
                 console.log(response.data.response);
                 this.listaMail.push(response.data.response);
-                
-                
-
-                
+            
             });
-
+        }
         },
-
     },
 });
 
