@@ -19,6 +19,10 @@ const appVue = new Vue({
 
 
     methods: {
+        // funzione per stampare le email recuperate tramite chiamata al server
+        stampaMail(){
+
+        },
 
     }
 });
