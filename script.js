@@ -16,7 +16,7 @@ const appVue = new Vue({
     data: {
         // array che dovrà contenere le dieci mail stampate nel DOM
         listaMail : [],
-        svuotaListaMail : []
+        //svuotaListaMail : []
 
     },
 
