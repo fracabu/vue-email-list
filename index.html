@@ -21,16 +21,20 @@
             <div class="py-5 text-center">
                 <h1>VUE MAIL LIST</h1>
             </div>
-            <div class="container d-flex justify-content-center bg-secondary py-5 mt-5">
+            <div class="container-lista-mail d-flex justify-content-center py-5 mt-5">
                 <ul>
-                    <li class="listaMail">{{ listaMail }}</li>
+                    <li class="listaMail" v-for = "mail in listaMail" >{{ listaMail }}</li>
+                    
                 </ul>
             </div>
+
+            
+            
             <div class="btn-container d-flex justify-content-center py-5">
-                <button class="btn btn-primary" @click="stampaMail">stampa mail</button>
+                <button class="btn btn-primary mx-5" @click="stampaMail">stampa mail</button>
+                <!-- <button class="btn btn-primary mx-5" @click="svuotaListaMail">cancella mail</button> -->
             </div>
-
-
+            
 
 
 

@@ -15,30 +15,45 @@ const appVue = new Vue({
 
     data: {
         // array che dovrà contenere le dieci mail stampate nel DOM
-        listaMail : []
+        listaMail : [],
+        svuotaListaMail : []
 
     },
 
 
     methods: {
 
-        // funzione per attivare il click sul pulsante stampa mail che chiederà le email al server
+        // funzione per il pulsante "stampa mail" che chiederà le email al server
         
         
-        stampaMail(){
-            for ( let i = 0 ; i <= 10; i++){
-            axios
-            .get("https://flynn.boolean.careers/exercises/api/random/mail")
-            // funzione arrow altrimenti il this non funziona e non stamperà le mail nel dom
-            .then((response) => {
-                // stampo solo la mail contenuta nei data ricevuti dal server
-                console.log(response.data.response);
-                this.listaMail.push(response.data.response);
-            
-            });
-        }
+        stampaMail() {
+            for (let i = 0; i <= 9; i++) {
+                axios
+                    .get("https://flynn.boolean.careers/exercises/api/random/mail")
+                    // funzione arrow altrimenti il this non funziona e non stamperà le mail nel dom
+                    .then((response) => {
+                        // stampo solo la mail contenuta nei data ricevuti dal server
+                        console.log(response.data.response);
+                        this.listaMail.push(response.data.response);
+
+                    });
+            }
+        //chiusura funziona stampaMail    
         },
+
+
+        /*funzione per pulsante svuotaListaMail
+        svuotaListaMail(){
+            listaMail(listaMail.lenght = 0);
+        },
+        */
+
+
+//chiusura di methods
     },
+
+
+//chiusura di vue   
 });
 
 
